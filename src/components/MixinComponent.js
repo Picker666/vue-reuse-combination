@@ -22,6 +22,13 @@ var myMixin = {
 // 定义一个使用混入对象的组件
 var Component = Vue.extend({
   mixins: [myMixin],
+  props: {
+    serialNumber: {
+      type: Number,
+      required: true,
+      default: 0
+    }
+  },
   data: function () {
     return {
       from: 'targetComponent',
@@ -36,7 +43,7 @@ var Component = Vue.extend({
       console.log('hello from target component!')
     }
   },
-  template:`<div><p>this is a mixin component</p><p>{{this.mixinMsg}}</p></div>`
+  template:`<div><h1>{{ serialNumber }}、{{ title }}</h1><p>this is a mixin component</p><p>{{this.mixinMsg}}</p></div>`
 })
 
 export default Component;
