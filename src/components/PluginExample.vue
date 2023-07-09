@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1 v-my-directive:picker="666">{{ serialNumber }}、{{ title }}</h1>
+    <hr>
   </div>
 </template>
 

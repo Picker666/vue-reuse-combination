@@ -46,6 +46,13 @@ Vue.component('smart-list', smartList);
 
 Vue.use(MyPlugin);
 
+Vue.filter('filterA', function (value) {
+  const length = value.length;
+  if (length < 2) return value;
+  value = value.toString()
+  return value[0] + value.charAt(1).toUpperCase() + value.slice(2)
+})
+
 new Vue({
   render: h => h(App),
   myOption: 'hello!'

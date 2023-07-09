@@ -5,6 +5,7 @@
     <CustomDirective :serialNumber="2" />
     <RenderFunction :serialNumber="3" />
     <PluginExample :serialNumber="4" />
+    <FilterComponent :serialNumber="5" />
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -15,6 +16,7 @@ import MixinComponent from './components/MixinComponent';
 import CustomDirective from './components/CustomDirective';
 import RenderFunction from './components/RenderFunction';
 import PluginExample from './components/PluginExample';
+import FilterComponent from './components/FilterComponent';
 
 export default {
   name: 'App',
@@ -23,7 +25,8 @@ export default {
     CustomDirective,
     MixinComponent,
     RenderFunction,
-    PluginExample
+    PluginExample,
+    FilterComponent
   }
 }
 </script>
