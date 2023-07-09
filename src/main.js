@@ -3,6 +3,7 @@ import App from './App.vue'
 import AnchoredHeading from './common/AnchoredHeading';
 import functionalComponent from './common/functionalComponent';
 import smartList from './common/smartList';
+import MyPlugin from './common/MyPlugin';
 
 Vue.config.productionTip = false
 
@@ -42,6 +43,8 @@ Vue.mixin({
 Vue.component('anchored-heading', AnchoredHeading);
 Vue.component('anchored-heading-functional', functionalComponent);
 Vue.component('smart-list', smartList);
+
+Vue.use(MyPlugin);
 
 new Vue({
   render: h => h(App),
