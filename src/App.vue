@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <MixinComponent :serialNumber="1" />
     <CustomDirective :serialNumber="2" />
+    <RenderFunction :serialNumber="3" />
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -11,13 +12,15 @@
 import HelloWorld from './components/HelloWorld.vue';
 import MixinComponent from './components/MixinComponent';
 import CustomDirective from './components/CustomDirective';
+import RenderFunction from './components/RenderFunction'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     CustomDirective,
-    MixinComponent
+    MixinComponent,
+    RenderFunction
   }
 }
 </script>

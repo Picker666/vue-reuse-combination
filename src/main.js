@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
+import AnchoredHeading from './common/AnchoredHeading';
+import functionalComponent from './common/functionalComponent';
+import smartList from './common/smartList';
 
 Vue.config.productionTip = false
 
@@ -27,6 +30,18 @@ Vue.mixin({
 //     actions: merge(toVal.actions, fromVal.actions)
 //   }
 // }
+
+// var getChildrenTextContent = function (children) {
+//   return children.map(function (node) {
+//     return node.children
+//       ? getChildrenTextContent(node.children)
+//       : node.text
+//   }).join('')
+// }
+
+Vue.component('anchored-heading', AnchoredHeading);
+Vue.component('anchored-heading-functional', functionalComponent);
+Vue.component('smart-list', smartList);
 
 new Vue({
   render: h => h(App),
